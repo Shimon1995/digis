@@ -1,26 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+// import { Provider } from "react-redux";
+// import { ReactDOM } from "react-dom";
+import { HashRouter, Route, NavLink } from "react-router-dom";
 
-function App() {
+import Auth from "./partials/Authorization";
+import Main from "./partials/Main";
+import About from "./partials/About";
+import Map from "./partials/Map";
+import "./App.less";
+
+import "milligram";
+import "./App.less";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HashRouter>
+      <div className="App container">
+        <h1>SPA</h1>
+        <ul>
+          <li>
+            <NavLink to="/auth">Authorization</NavLink>
+          </li>
+          <li>
+            <NavLink to="/main">Main Page</NavLink>
+          </li>
+          <li>
+            <NavLink to="/about">About Author</NavLink>
+          </li>
+          <li>
+            <NavLink to="/map">Map</NavLink>
+          </li>
+        </ul>
+        <div className="content">
+          <Route path="/auth" component={Auth} />
+          <Route path="/main" component={Main} />
+          <Route path="/about" component={About} />
+          <Route path="/map" component={Map} />
+        </div>
+      </div>
+    </HashRouter>
   );
-}
+};
 
 export default App;
