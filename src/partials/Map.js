@@ -79,7 +79,7 @@ const Map = props => (
 
 const MapWithASearchBox = withProps({
   googleMapURL:
-    "https://maps.googleapis.com/maps/api/js?key=AIzaSyBW91PQ1kGgzhLqx7J5oWsPxmWPPsC9fx4&v=3.exp&libraries=geometry,drawing,places",
+    "https://maps.googleapis.com/maps/api/js?key=API_KEY&v=3.exp&libraries=geometry,drawing,places",
   loadingElement: <div style={{ height: `100%` }} />,
   containerElement: <div style={{ height: `100vh` }} />,
   mapElement: <div style={{ height: `100%` }} />
@@ -158,7 +158,6 @@ const MapWithASearchBox = withProps({
             center: nextCenter,
             markers: nextMarkers
           });
-          // refs.map.fitBounds(bounds);
         }
       });
     }
