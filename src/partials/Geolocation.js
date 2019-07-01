@@ -6,6 +6,8 @@ if (navigator.geolocation) {
     });
 } else {
     alert("Can't get location");
+     pos.lat = 12;
+     pos.lng = 12;
 }
 
 export default pos;
