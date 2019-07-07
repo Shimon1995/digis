@@ -20,3 +20,8 @@ button – shows it
 10) Create list with type of objects to be chosen (pharmacies, gas stations, schools,
 restaurants) so click on the list item has to draw markers on the map with the closest
 chosen objects
+
+## Start
+To start the project, enter ```npm start``` in your console the project directory.
+## Build
+Similary for **build** command ```npm build```.
