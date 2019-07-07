@@ -1,5 +1,6 @@
 # Digis test task
 
+## Task description
 1) Create a git repository on github.com
 2) Implement React + Redux + React router Architecture ( es6 required!!! )
 3) Configure webpack.config.js
